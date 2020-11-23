@@ -8,7 +8,7 @@ class Article < ApplicationRecord
   def tag_list
     tags.collect(&:name).join(', ')
   end
-
+  
   def tag_list=(tags_string) # tags_string = "ruby, technology"
     tag_names_array = tags_string.split(',').collect { |ele| ele.strip.downcase }.uniq
 
